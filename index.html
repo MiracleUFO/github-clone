@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>GitHub  User Retrieval</title>
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet"> 
+    <script src="scripts/index.js" type="module"></script>    
+  </head>
+
+  <body>
+    <div>
+      <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub icon" id="form-github-icon" />
+      <h1>Retrieve User Profile</h1>
+    </div>
+  
+    <form name="usernameForm" id="username-form">
+      <div class="row">
+        <label for="search-bar">Username</label>
+        <input type="text" name="username" id="search-bar" />
+        <button id="retrieve-btn" class="search">Retrieve</button>
+      </div>
+      
+      <div id="results">
+        <p id="error-result"></p>
+      </div>
+    </form>
+  </body>
+  </html>
