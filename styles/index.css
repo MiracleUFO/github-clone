@@ -43,7 +43,7 @@ h1 {
 }
 
 .preloader {
-  margin-top: 27vh;
+  margin-top: 25vh;
   width: 45%;
 }
 
@@ -53,7 +53,7 @@ h1 {
 }
 
 form > div {
-  width: 60%;
+  width: 75%;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
