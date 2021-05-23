@@ -1,16 +1,22 @@
-//import { loadData } from './loadData';
+import { loadData } from './loadData.js';
+import { mapData } from './mapData.js';
+
 
 window.addEventListener("load", function () {
   let el = document.getElementById("retrieve-btn");
+
   el.addEventListener("click", function (e){
     sendUsername(e);
-  } , false);
+  }, false);
 });
 
-const sendUsername = (e) => {
+
+const sendUsername = async (e) => {
   e.preventDefault();
   let username = document.usernameForm.username.value;
+
   if (username) {
-    console.log(username);
+    const userData = await loadData(username);
+    return userData;
   }
 }
