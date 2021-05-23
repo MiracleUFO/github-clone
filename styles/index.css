@@ -22,7 +22,8 @@ body > div, form {
 h1 {
   font-size: 2.2rem;
   font-weight: 200;
-  margin: 35px auto 20px;
+  letter-spacing: -0.5px;
+  margin: 35px auto 30px;
   color: rgba(31,35,65,0.99);
 }
 
@@ -53,19 +54,19 @@ h1 {
 }
 
 form > div {
-  width: 60%;
-  border-radius: 6px;
+  width: 77%;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .row {
-  height: 170px;
-  padding: 60px 0 50px;
+  height: 300px;
+  padding: 60px 0 70px;
   justify-content: space-between;
   background-color: #f6f8fa;
-  border: 1px solid #d1d5da;
+  border: 1px solid rgba(0,0,0,0.06);
 }
 
 input, button {
@@ -84,13 +85,18 @@ button:hover {
 .focus-visible {
   box-shadow: 0 0 3.2px 0.9px #0366d6;
   border: 1px solid #005cc5;
-  outline: transparent;
+  outline: none;
 }
 
 label {
   font-size: 1.5rem;
   color: black;
   padding-left: 12%;
+  position: relative;
+  top: 50px;
+  left: -0.5px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
 }
 
 button {
@@ -101,39 +107,47 @@ button {
 }
 
 
-@media screen and (min-width: 768px) {
-  .preloader {
-    margin-top: 12vh;
-  }
 
-  h1 {
-    font-size: 1.5rem;
-  }
+@media screen 
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .preloader {
+      margin-top: 12vh;
+    }
 
-  #form-github-icon {
-    width: 3rem;
-    margin-top: 5vh;
-  }
+    h1 {
+      font-size: 1.5rem;
+      margin: 35px auto 15px;
+    }
 
-  form > div {
-    width: 32%;
-  }
+    #form-github-icon {
+      width: 3rem;
+      margin-top: 5vh;
+    }
 
-  .row {
-    height: 120px;
-  }
+    form > div {
+      width: 32%;
+    }
 
-  label {
-    font-size: 0.9rem;
-  }
+    .row {
+      height: 140px;
+      padding: 40px 0;
+    }
 
-  input, button {
-    padding: 8px 15px;
-  }
+    label {
+      font-size: 0.9rem;
+      top: 16px;
+      left: -5.5px;
+    }
 
-  button {
-    width: 80%;
-    font-size: 0.9rem;
+    input, button {
+      padding: 8px 15px;
+    }
+
+    button {
+      width: 80%;
+      font-size: 0.9rem;
+    }
   }
-}
 

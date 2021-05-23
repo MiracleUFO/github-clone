@@ -1,3 +1,5 @@
+import { mapData } from './mapData.js';
+
 
 export const loadData = async (username) => {   //Gets data using GitHub GraphQL API
 

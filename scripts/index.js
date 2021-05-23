@@ -1,5 +1,4 @@
 import { loadData } from './loadData.js';
-import { mapData } from './mapData.js';
 
 
 window.addEventListener("load", function () {
@@ -11,12 +10,11 @@ window.addEventListener("load", function () {
 });
 
 
-const sendUsername = async (e) => {
+const sendUsername = (e) => {
   e.preventDefault();
   let username = document.usernameForm.username.value;
 
   if (username) {
-    const userData = await loadData(username);
-    return userData;
+   loadData(username);
   }
 }
