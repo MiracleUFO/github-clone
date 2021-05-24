@@ -1,5 +1,4 @@
 body {
-  width: 80vw;
   height: 65vh;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -15,12 +14,12 @@ body > div, form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.2rem;
+  text-align: center;
+  font-size: 1.9em;
   font-weight: 200;
   letter-spacing: -0.5px;
   margin: 35px auto 30px;
@@ -49,12 +48,12 @@ h1 {
 }
 
 #form-github-icon {
-  margin-top: 20vh;
+  margin-top: 12vh;
   width: 5rem;
 }
 
 form > div {
-  width: 77%;
+  width: 82%;
   border-radius: 7px;
   display: flex;
   flex-direction: column;
@@ -62,8 +61,8 @@ form > div {
 }
 
 .row {
-  height: 300px;
-  padding: 60px 0 70px;
+  height: 250px;
+  padding: 0 0 25px;
   justify-content: space-between;
   background-color: #f6f8fa;
   border: 1px solid rgba(0,0,0,0.06);
@@ -107,12 +106,12 @@ button {
 }
 
 
-
 @media screen 
   and (min-device-width: 1200px)
   and (max-device-width: 1600px)
   and (-webkit-min-device-pixel-ratio: 1) {
     body {
+      width: 80vw;
       height: 75vh;
     }
 

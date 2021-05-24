@@ -37,8 +37,7 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
       }
     }
   }`;
-  let API_TOKEN = config.API_TOKEN;
-  let oauth = {Authorization: 'bearer ' + API_TOKEN};
+  let oauth = {Authorization: `bearer ${config.API_TOKEN}`};
 
   //Sends request to load user's data from Github GraphQL API
   axios.post(requestURL, {query: query}, {headers: oauth})
@@ -48,6 +47,9 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
     document.getElementById('wrapper').setAttribute('class', '');
     document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
     document.getElementById('preloader').setAttribute('class', '');
+
+    //Sends user's data to mapData for injection into the DOM
+    mapData(res.data);
 
     return res.data
   })
