@@ -1,6 +1,6 @@
 body {
   width: 80vw;
-  height: 75vh;
+  height: 65vh;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
@@ -112,6 +112,10 @@ button {
   and (min-device-width: 1200px)
   and (max-device-width: 1600px)
   and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+      height: 75vh;
+    }
+
     .preloader {
       margin-top: 12vh;
     }

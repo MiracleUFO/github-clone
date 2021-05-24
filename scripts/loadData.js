@@ -39,7 +39,6 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
   }`;
   let API_TOKEN = config.API_TOKEN;
   let oauth = {Authorization: 'bearer ' + API_TOKEN};
-  console.log(oauth);
 
   //Sends request to load user's data from Github GraphQL API
   axios.post(requestURL, {query: query}, {headers: oauth})
