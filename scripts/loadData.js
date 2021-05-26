@@ -1,4 +1,4 @@
-import { mapData } from './mapData.js';
+import { mapData } from "./mapData.js";
 
 
 export const loadData = async (username) => {   //Gets data using GitHub GraphQL API
@@ -20,6 +20,7 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
         name,
         bio,
         repositories(first: 20) {
+          totalCount,
           edges {
             node {
               name,
@@ -47,11 +48,13 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
     document.getElementById('wrapper').setAttribute('class', '');
     document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
     document.getElementById('preloader').setAttribute('class', '');
+    document.getElementById('form-wrapper').setAttribute('class', 'main');
+    document.getElementById('main').setAttribute('class', 'main-visible');
 
-    //Sends user's data to mapData for injection into the DOM
-    mapData(res.data);
-
+    //Sends user's data to mapData for injection into the profile.html DOM
+    console.log(res.data);mapData(res.data);
     return res.data
   })
   .catch((err) => console.log(err))
 }
+ 

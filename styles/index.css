@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-body > div, form {
+body > div, body section > div, form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@ body > div, form {
 
 h1 {
   text-align: center;
-  font-size: 1.9em;
+  font-size: 2.5em;
   font-weight: 200;
   letter-spacing: -0.5px;
   margin: 35px auto 30px;
@@ -43,13 +43,13 @@ h1 {
 }
 
 .preloader {
-  margin-top: 35vh;
+  margin-top: 45vh;
   width: 45%;
 }
 
 #form-github-icon {
   margin-top: 12vh;
-  width: 5rem;
+  width: 6rem;
 }
 
 form > div {
@@ -62,7 +62,7 @@ form > div {
 
 .row {
   height: 250px;
-  padding: 0 0 25px;
+  padding: 90px 0 130px;
   justify-content: space-between;
   background-color: #f6f8fa;
   border: 1px solid rgba(0,0,0,0.06);
@@ -77,6 +77,10 @@ input, button {
   cursor: pointer;
 }
 
+input {
+  font-size: 1.5em
+}
+
 button:hover {
   border: none;
 }
@@ -88,11 +92,11 @@ button:hover {
 }
 
 label {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: black;
   padding-left: 12%;
   position: relative;
-  top: 50px;
+  top: 20px;
   left: -0.5px;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -105,13 +109,28 @@ button {
   font-size: 1.5rem;
 }
 
+.main {
+  display: none;
+}
+
+.main-visible {
+  display: block;
+}
+
+#repo-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
 
 @media screen 
   and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (max-device-width: 1600px) {
     body {
-      width: 80vw;
       height: 75vh;
     }
 
@@ -130,7 +149,7 @@ button {
     }
 
     form > div {
-      width: 32%;
+      width: 25%;
     }
 
     .row {
@@ -148,9 +167,16 @@ button {
       padding: 8px 15px;
     }
 
+    input, button {
+      font-size: 0.85rem
+    }
+
     button {
       width: 80%;
-      font-size: 0.9rem;
+    }
+
+    #repo-section {
+      flex-direction: row;
     }
   }
 

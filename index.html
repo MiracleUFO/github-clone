@@ -3,37 +3,128 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub  User Retrieval</title>
     <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/headers.css">
+    <link rel="stylesheet" href="styles/aside.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
     <script type="text/javascript" src="config.js"></script>
-    <script src="scripts/index.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
     <div id="preloader-wrapper" class="preloader-wrapper">
-      <img src="./assets/preloader.gif" id="preloader" alt="Spinning circle" />
+        <img src="./assets/preloader.gif" id="preloader" alt="Spinning circle" />
     </div>
-   
-    <div>
-      <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub icon" id="form-github-icon" />
-      <h1>Retrieve User Profile</h1>
-    </div>
-  
-    <form name="usernameForm" id="username-form">
-      <div class="row">
-        <label for="search-bar">Username</label>
-        <input type="text" name="username" id="search-bar" />
-        <button id="retrieve-btn" class="search">Retrieve</button>
+
+    <section id="form-wrapper">
+      <div>
+        <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub icon" id="form-github-icon" />
+        <h1>Retrieve User Profile</h1>
       </div>
-      
-      <div id="results">
-        <p id="error-result"></p>
-      </div>
-    </form>
+    
+      <form name="usernameForm" id="username-form">
+        <div class="row">
+          <label for="search-bar">Username</label>
+          <input type="text" name="username" id="search-bar" />
+          <button id="retrieve-btn" class="search">Retrieve</button>
+        </div>
+        
+        <div id="results">
+          <p id="error-result"></p>
+        </div>
+      </form>
+    </section>
+
+    <section id="main" class="main">
+      <header>
+
+        <div id="primary-header-mobile">
+          <span id="open-burger" class="iconify" data-icon="octicon:three-bars-16" data-inline="false"></span>
+          <a href="www.github.com">
+            <span class="iconify github-icon" data-icon="octicon:mark-github-16" data-inline="false"></span>
+          </a>
+          <span>
+            <div class="bell-blob"></div>
+            <span class="iconify" data-icon="octicon:bell-16" data-inline="false"></span>
+          </span>
+        </div>
+
+        <div id="primary-header-pc">
+          <div>
+            <a href="www.github.com">
+              <span class="iconify github-icon" data-icon="octicon:mark-github-16" data-inline="false"></span>
+            </a>
+
+            <form>
+              <input placeholder="Search or jump to" id="edit-input" />
+              <span id="filter"><img src="https://github.githubassets.com/images/search-key-slash.svg" alt="Filter" /></span>
+            </form>
+
+            <div>
+              <a href="#">Pull requests</a>
+              <a href="#">Issues</a>
+              <a href="#">Codespaces</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Explore</a>
+            </div>
+            
+          </div>
+
+          <div>
+            <span>
+              <div class="bell-blob"></div>
+              <span class="iconify" data-icon="octicon:bell-16" data-inline="false"></span>
+            </span>
+            <span>
+              <span class="iconify" data-icon="octicon:plus-24" data-inline="false"></span>
+              <img src="assets/arrow-down.png" class="dropdown-icon" />
+            </span>
+            <span>
+              <span id="avatar-div-petit"></span>
+              <img src="assets/arrow-down.png" class="dropdown-icon" />
+            </span>
+            
+          </div>
+        </div>
+
+        <div id="secondary-header">
+          <a href="#"><i class="fas fa-book-open"></i>Overview</a>
+          <a href="#"><img src="assets/pen.png" alt="Edit" />Repositories<span id='repo-count'></span></a>
+          <a href="#"><img src="assets/pen.png" alt="Edit" />Projects</a>
+          <a href="#"><img src="assets/pen.png" alt="Edit" />Packages</a>
+        </div>
+      </header>
+
+      <section id="burger-menu">
+        <ul>
+          <li>
+          <form>
+            <input placeholder="Search" />
+          </form>
+          </li>
+          <li>Dashboard</li>
+          <li>Pull requests</li>
+          <li>Issues</li>
+          <li>MarketPlace</li>
+          <li>Explore</li>
+          <li>Codespaces</li>
+          <li>Sponsors</li>
+          <li>Settings</li>
+          <li id="avatar-div-petit-li"></li>
+        </ul>
+        <div><img src="" /> Sign out</div>
+      </section>
+
+      <section id="repo-section">
+        <aside></aside>
+        <main></main>
+      </section> 
+    </section>
+    
   </body>
   </html>

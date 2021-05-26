@@ -1,4 +1,4 @@
-import { loadData } from './loadData.js';
+import { loadData } from './scripts/loadData.js';
 
 
 window.addEventListener("load", function () {   //Adds click event to retrieve-btn

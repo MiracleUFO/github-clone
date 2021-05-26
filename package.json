@@ -1,0 +1,19 @@
+{
+  "name": "github-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiracleUFO/github-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiracleUFO/github-clone/issues"
+  },
+  "homepage": "https://github.com/MiracleUFO/github-clone#readme"
+}

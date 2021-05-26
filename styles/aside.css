@@ -1,0 +1,13 @@
+@media screen 
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+    aside {
+      width: 30%;
+      height: 90vh;
+      padding: 0 2vw;
+    }
+    main {
+      width: 70%;
+      height: 90vh;
+    }
+  }

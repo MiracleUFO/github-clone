@@ -1,0 +1,138 @@
+.avatar {
+  border-radius: 50%;
+}
+
+#primary-header-mobile, #primary-header-mobile a,  #primary-header-pc, #primary-header-pc a {
+  color: white;
+  text-decoration: none;
+}
+
+#primary-header-mobile a,  #primary-header-pc a {
+  width: max-content;
+}
+
+#primary-header-mobile, #primary-header-pc {
+  display: flex;
+  background: #333333;
+  color: white;
+  height: 120px;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#primary-header-mobile .iconify, #primary-header-pc .iconify {
+  color: white;
+  width: 3.2em;
+  height: 9em;
+}
+
+#primary-header-pc .iconify {
+  width: 1.5em;
+}
+
+#primary-header-pc div, #primary-header-pc span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#primary-header-mobile .github-icon {
+  width: 4.5em;
+  height: 15em;
+}
+
+.bell-blob {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: deepskyblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  z-index: 20;
+  left: 94.5%;
+}
+
+#primary-header-pc {
+  display: none;
+  height: 55px;
+}
+
+#primary-header-pc > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#primary-header-pc > div:first-of-type div {
+  display: flex;
+  justify-content: space-between;
+  width: 38vw;
+}
+
+#primary-header-pc > div:nth-of-type(2) {
+  width: 10%;
+}
+
+#primary-header-pc .github-icon {
+  width: 2em;
+  height: 9em;
+}
+
+#primary-header-pc form {
+  width: 55%;
+  flex-direction: row;
+}
+
+#primary-header-pc input {
+  background: transparent
+}
+
+#primary-header-pc :-ms-input-placeholder {
+  color: white;
+  font-weight: 400;
+}
+
+#filter {
+  position: relative;
+  right: 55px;
+}
+
+.dropdown-icon {
+  width: 0.75em;
+}
+
+
+@media screen 
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+    #primary-header-mobile {
+      display: none;
+    }
+
+    #primary-header-pc {
+      display: flex;
+    }   
+
+    .github-icon {
+      width: 3.2rem;
+    }
+
+    #avatar-div-petit {
+      width: 7%;
+      border-radius: 50%;
+    }
+
+    #avatar-div-petit .avatar {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .bell-blob {
+      width: 0.9em;
+      height: 0.9em;
+      border-radius: 50%;
+      top: 12px;
+      left: 90.2%;
+    }
+}
