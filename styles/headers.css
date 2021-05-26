@@ -3,7 +3,8 @@
 }
 
 #primary-header-mobile, #primary-header-mobile a,  #primary-header-pc, #primary-header-pc a {
-  color: white;
+  color: #eee;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -14,7 +15,7 @@
 #primary-header-mobile, #primary-header-pc {
   display: flex;
   background: #333333;
-  color: white;
+  color: #eee;
   height: 120px;
   padding: 0 30px;
   align-items: center;
@@ -22,7 +23,7 @@
 }
 
 #primary-header-mobile .iconify, #primary-header-pc .iconify {
-  color: white;
+  color: #eee;
   width: 3.2em;
   height: 9em;
 }
@@ -40,6 +41,7 @@
 #primary-header-mobile .github-icon {
   width: 4.5em;
   height: 15em;
+  color: white;
 }
 
 .bell-blob {
@@ -67,7 +69,9 @@
 #primary-header-pc > div:first-of-type div {
   display: flex;
   justify-content: space-between;
-  width: 38vw;
+  width: 41vw;
+  position: relative;
+  right: 15px;
 }
 
 #primary-header-pc > div:nth-of-type(2) {
@@ -77,29 +81,53 @@
 #primary-header-pc .github-icon {
   width: 2em;
   height: 9em;
+  color: white;
 }
 
 #primary-header-pc form {
-  width: 55%;
+  width: 50%;
   flex-direction: row;
+  position: relative;
+  right: 15px;
 }
 
 #primary-header-pc input {
-  background: transparent
+  background: transparent;
+  border: 1px solid #666;
+  padding: 5px 35px 5px 5px;
+  border-radius: 6px;
+  color: #eee;
 }
 
-#primary-header-pc :-ms-input-placeholder {
+#primary-header-pc input:focus {
+  padding-right: 45px;
+}
+
+#primary-header-pc .focus-visible {
+  box-shadow: none;
+  border: 1px solid #666;
+  outline: none;
+}
+
+:-ms-input-placeholder {
   color: white;
   font-weight: 400;
 }
 
 #filter {
-  position: relative;
-  right: 55px;
+  position: absolute;
+  right: 33px;
 }
 
 .dropdown-icon {
-  width: 0.75em;
+  width: 0.45em;
+  position: relative;
+  top: 0.2em;
+  margin-left: 3px;
+}
+
+#primary-header-pc .bell-icon {
+  width: 1em;
 }
 
 
@@ -115,7 +143,7 @@
     }   
 
     .github-icon {
-      width: 3.2rem;
+      width: 3rem;
     }
 
     #avatar-div-petit {
@@ -129,10 +157,84 @@
     }
 
     .bell-blob {
-      width: 0.9em;
-      height: 0.9em;
+      width: 0.5em;
+      height: 0.5em;
       border-radius: 50%;
-      top: 12px;
-      left: 90.2%;
+      top: 17px;
+      left: 90%;
+    }
+}
+
+#secondary-header {
+  border-bottom: 1px inset lightgrey;
+}
+
+#secondary-header > div {
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  padding: 0 5vw 0;
+  overflow-x: scroll;
+}
+
+#secondary-header > div .iconify {
+  display: none;
+  margin-right: 7px;
+  position: relative;
+  top: 3px;
+}
+
+#secondary-header > div div {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  font-size: 2.5em;
+  margin-right: 7vw;
+}
+
+#repo-tab {
+  border-bottom: 1px solid red;
+  color: black;
+}
+
+#repo-count {
+  width: 50px;
+  height: 40px;
+  border-radius: 9px;
+  margin-left: 7px;
+  margin-top: 3px;
+  text-align: center;
+  background: #eee;
+  font-size: 0.65em;
+}
+
+@media screen 
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+    #secondary-header > div {
+      font-weight: 600;
+      width: 50%;
+      margin: 0 25% 0;
+      justify-content: flex-start;
+      padding: 0;
+      overflow-x: visible;
+    }
+
+    #secondary-header > div .iconify {
+      display: inline;
+    }
+
+    #secondary-header > div div {
+      font-size: 1em;
+      margin-right: 3.5vw;
+    }
+
+    #repo-count {
+      width: 35px;
+      height: 20px;
+      margin-left: 5px;
+      font-size: 0.8em;
     }
 }

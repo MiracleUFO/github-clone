@@ -78,7 +78,7 @@
           <div>
             <span>
               <div class="bell-blob"></div>
-              <span class="iconify" data-icon="octicon:bell-16" data-inline="false"></span>
+              <span class="iconify bell-icon" data-icon="octicon:bell-16" data-inline="false"></span>
             </span>
             <span>
               <span class="iconify" data-icon="octicon:plus-24" data-inline="false"></span>
@@ -93,10 +93,12 @@
         </div>
 
         <div id="secondary-header">
-          <a href="#"><i class="fas fa-book-open"></i>Overview</a>
-          <a href="#"><img src="assets/pen.png" alt="Edit" />Repositories<span id='repo-count'></span></a>
-          <a href="#"><img src="assets/pen.png" alt="Edit" />Projects</a>
-          <a href="#"><img src="assets/pen.png" alt="Edit" />Packages</a>
+          <div>
+            <div><span class="iconify" data-icon="octicon:book-16" data-inline="false"></span>Overview</div>
+            <div id="repo-tab"><span class="iconify repo-book-icon" data-icon="octicon:repo-16" data-inline="false"></span>Repositories<span id='repo-count'></span></div>
+            <div><span class="iconify" data-icon="octicon:project-16" data-inline="false"></span>Projects</div>
+            <div><span class="iconify" data-icon="octicon:package-16" data-inline="false"></span>Packages</div>
+          </div>
         </div>
       </header>
 
