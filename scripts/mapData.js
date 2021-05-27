@@ -6,19 +6,22 @@ export const mapData = (data) => {  //
   let userInfo = {...data.data.repositoryOwner};
 
   //Map aside data
-  const aside = document.getElementsByTagName('aside');
-  aside[0].innerHTML = `
-    <img src=${userInfo.avatarUrl} alt="User avatar" class="avatar" />
+  const aside = document.getElementById('aside-section');
+  aside.innerHTML = `
+    ${aside.innerHTML}
     <div>
-      <h1>${userInfo.name}</h1>
-      <p>${userInfo.login}</p>
+      <img src=${userInfo.avatarUrl} alt="User avatar" class="avatar" />
+      <div>
+        <h1>${userInfo.name}</h1>
+        <p>${userInfo.login}</p>
+      </div>
     </div>
     <p>${userInfo.bio}</p>
   `;
 
   
   //Selects repositories section
-  const repoWrapper = document.getElementById('main');
+  const repoWrapper = document.getElementById('repo-section');
 
   //Variables for color associated with repo, and dates
   let languageColor, fullDate;

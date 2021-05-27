@@ -10,13 +10,14 @@
 
 #primary-header-mobile a,  #primary-header-pc a {
   width: max-content;
+  font-size: 0.92em;
 }
 
 #primary-header-mobile, #primary-header-pc {
   display: flex;
   background: #333333;
   color: #eee;
-  height: 120px;
+  height: 150px;
   padding: 0 30px;
   align-items: center;
   justify-content: space-between;
@@ -57,7 +58,7 @@
 
 #primary-header-pc {
   display: none;
-  height: 55px;
+  height: 65px;
 }
 
 #primary-header-pc > div:first-of-type {
@@ -166,6 +167,8 @@
 }
 
 #secondary-header {
+  position: relative;
+  top: 30vh;
   border-bottom: 1px inset lightgrey;
 }
 
@@ -213,6 +216,10 @@
 @media screen 
   and (min-device-width: 1200px)
   and (max-device-width: 1600px) {
+    #secondary-header {
+      position: static;
+    }
+
     #secondary-header > div {
       font-weight: 600;
       width: 50%;
@@ -237,4 +244,8 @@
       margin-left: 5px;
       font-size: 0.8em;
     }
+}
+
+#burger-menu {
+  display: none;
 }

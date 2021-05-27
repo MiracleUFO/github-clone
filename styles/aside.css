@@ -1,13 +1,99 @@
+aside {
+  width: 90vw;
+  margin: 0 auto;
+  height: 30vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+aside > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+aside > div:first-of-type > div {
+  margin-left: 20px;
+}
+
+aside img {
+  width: 15vw;
+}
+
+aside h1 {
+  margin: 0;
+  letter-spacing: 0.3px;
+  font-size: 4.5em;
+  font-weight: 600;
+}
+
+aside h1, aside p {
+  color: #222;
+}
+
+aside p {
+  font-size: 2.5em;
+}
+
+aside > div:first-of-type div > p {
+  position: static;
+  margin: 0;
+  color: #666;
+  font-size: 3em;
+  font-weight: 200;
+}
+
 @media screen 
   and (min-device-width: 1200px)
   and (max-device-width: 1600px) {
     aside {
-      width: 30%;
+      display: block;
+      width: max-content;
       height: 90vh;
       padding: 0 2vw;
     }
-    main {
-      width: 70%;
-      height: 90vh;
+    
+    aside > div:first-of-type {
+      width: max-content;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 1vw;
+    }
+
+    aside > div:first-of-type > div {
+      margin: 0;
+    }
+
+    aside > div:first-of-type div, aside p {
+     position: relative;
+     bottom: 15px;
+    }
+
+    aside > div:first-of-type div > p {
+      position: static;
+      font-size: 1.2em;
+    }
+
+    aside h1 {
+      font-size: 1.6em;
+    }
+
+    aside p {
+      margin: 10px 0 0;
+      margin-left: 1vw;
+      font-size: 1em;
+      color: #333;
+    }
+
+    aside img {
+      width: 22vw;
+      position: relative;
+      bottom: 30px;
+      margin-left: -1vw;
     }
   }
