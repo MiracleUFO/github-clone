@@ -1,0 +1,147 @@
+#repo-section form {
+  margin: 50px auto;
+}
+
+#repo-section form input {
+  width: 90vw;
+  padding: 25px 20px;
+  border: 1px solid #bbb;
+  border-radius: 12px;
+}
+
+.repo-item {
+  margin: 10px 4vw;
+  padding: 40px 0 50px;
+  border-bottom: 1px solid #bbb;
+}
+
+.repo-item a {
+  text-decoration: none;
+  color: #0366d6;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.repo-item > div {
+  align-items: revert;
+}
+
+.repo-item p, .description {
+  color: #888;
+  font-size: 2em;
+}
+
+.repo-item span {
+  font-size: 11.3px;
+  color: #222;
+}
+
+.description {
+  margin-top: 10px;
+  width: 70%;
+  word-wrap: break-word;
+  line-height: 50px;
+}
+
+.adt-info {
+  margin-top: 2vh;
+}
+
+.adt-info > span {
+  margin-right: 2.5vw;
+}
+
+.language-div {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.adt-info .iconify {
+  width: 24px;
+  height: 24px;
+}
+
+.repo-item button {
+  display: none;
+}
+
+
+@media screen 
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    main {
+      width: 70%;
+      height: 90vh;
+    }
+
+    #repo-section form {
+      margin: 20px auto;
+    }
+
+    #repo-section form, #repo-section form input {
+      width: 93%;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    #repo-section form input {
+      border: 1px solid #eee;
+    }
+    
+    .repo-item {
+      padding: 0;
+      padding: 20px 0 30px;
+    }
+
+    .repo-item > div {
+      align-items: revert;
+      display: inline-block;
+      margin: 0;
+      width: 55vw;
+    }
+
+    .repo-item button {
+      position: absolute;
+      display: inline;
+      width: 75px;
+      height: 32px;
+      margin: 0;
+      color: grey;
+      background: rgba(0, 0, 0, 0.03);
+      border: none;
+    }
+
+    .repo-item a {
+      font-size: 1.3em;
+    }
+
+    .description {
+      font-size: 1em;
+      line-height: 30px;
+    }
+
+    .language-div {
+      width: 10px;
+      height: 10px;
+    }
+
+    .adt-info > span {
+      margin-right: 1vw;
+      font-size: 12px;
+    }
+
+    .adt-info > span:first-of-type span {
+      margin-right: 1vw;
+    }
+
+    .adt-info .iconify {
+      width: 12px;
+      height: 12px;
+    }
+  }

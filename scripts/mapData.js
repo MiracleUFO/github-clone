@@ -45,23 +45,28 @@ export const mapData = (data) => {  //
         <div>
           <div>
             <a href=${repo.node.url}>${repo.node.name}</a>
-            <div>${repo.node.description ? repo.node.description : ''}</div>
-          </div>
-
-          <div>
-            <span>
-              <div class="language-div" style=background-color:${languageColor ? languageColor : ''}>
-              </div>
-              ${repo.node.primaryLanguage ? repo.node.primaryLanguage.name : ''}
-            </span>
-            <span><img src="./assets/star.png" alt="Star icon" />${repo.node.stargazerCount}</span>
-            <span><img src="./assets/fork.png" alt="Fork icon" />${repo.node.forkCount}</span>
-            <span>Updated on ${finalDate}</span>
+            <div class="description">${repo.node.description ? repo.node.description : ''}</div>
+            <div class="adt-info">
+              <span>
+                <div class="language-div" style=background-color:${languageColor ? languageColor : ''}>
+                </div>
+                <span>${repo.node.primaryLanguage ? repo.node.primaryLanguage.name : ''}</span>
+              </span>
+              <span>
+                <span class="iconify" data-icon="octicon:star-24" data-inline="false"></span>
+                <span>${repo.node.stargazerCount}</span>
+              </span>
+              <span>
+                <span class="iconify" data-icon="octicon:repo-forked-24" data-inline="false"></span>
+                <span>${repo.node.forkCount}</span>
+              </span>
+              <span>Updated on ${finalDate}</span>
+            </div>
           </div>
         </div>
 
         <button class="star-button">
-          <img src="./assets/star.png" alt="Star icon" />
+          <span class="iconify" data-icon="octicon:star-24" data-inline="false"></span>
           Star
         </button>
       </section>

@@ -1,7 +1,7 @@
 aside {
   width: 90vw;
-  margin: 0 auto;
   height: 30vh;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -52,6 +52,7 @@ aside > div:first-of-type div > p {
     aside {
       display: block;
       width: max-content;
+      margin: 0;
       height: 90vh;
       padding: 0 2vw;
     }
@@ -71,7 +72,7 @@ aside > div:first-of-type div > p {
 
     aside > div:first-of-type div, aside p {
      position: relative;
-     bottom: 15px;
+     bottom: 25px;
     }
 
     aside > div:first-of-type div > p {
@@ -93,7 +94,7 @@ aside > div:first-of-type div > p {
     aside img {
       width: 22vw;
       position: relative;
-      bottom: 30px;
+      bottom: 45px;
       margin-left: -1vw;
     }
   }
