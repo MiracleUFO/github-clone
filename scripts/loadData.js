@@ -13,7 +13,7 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
   let query = 
   `query {
     repositoryOwner(login: "${username}") {
-      login
+      login,
       ...on User {
         avatarUrl,
         login,
@@ -31,7 +31,8 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
               updatedAt,
               primaryLanguage {
                 name
-              }
+              },
+              isPrivate
             }
           }
         }

@@ -26,9 +26,10 @@ export const mapData = (data) => {  //
   const repoWrapper = document.getElementById('repo-section');
 
   //Variables for color associated with language, and dates
-  let languageColor, fullDate, finalDate, today, todayYear;
-  today = new Date();
-  todayYear = today.getFullYear();
+  let languageColor, fullDate, 
+  finalDate, today = new Date(), 
+  todayYear = today.getFullYear(), publicRepoCount = 0;
+
 
   userInfo.repositories.edges.map((repo) => {   //Maps repo-section data
 
@@ -37,6 +38,9 @@ export const mapData = (data) => {  //
 
     //Primary language color for repo
     languageColor = languageColorModule(repo);
+
+    //Sets number of public repos
+    if (!repo.node.isPrivate) publicRepoCount++;
 
     //Inserts DOM elements with repo data
     repoWrapper.innerHTML = `
@@ -72,7 +76,7 @@ export const mapData = (data) => {  //
       </section>
     `;
   })
-
+  document.getElementById('public-repo-count').innerHTML = `<b>${publicRepoCount}</b>`;
 
   //Maps header data
   const userAvatar = document.getElementById('avatar-div-petit');
