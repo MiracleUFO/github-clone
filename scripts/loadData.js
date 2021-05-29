@@ -1,3 +1,4 @@
+import firestore from '../config/firestore.js';
 import { mapData } from "./mapData.js";
 
 
@@ -39,23 +40,29 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
       }
     }
   }`;
-  let oauth = {Authorization: `bearer ${config.API_TOKEN}`};
 
-  //Sends request to load user's data from Github GraphQL API
-  axios.post(requestURL, {query: query}, {headers: oauth})
-  .then((res) => {
 
-    //Hides preloader when data arrives
-    document.getElementById('wrapper').setAttribute('class', '');
-    document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
-    document.getElementById('preloader').setAttribute('class', '');
-    document.getElementById('form-wrapper').setAttribute('class', 'main');
-    document.getElementById('main').setAttribute('class', 'main-visible');
+  firestore.getKey()
+  .then(s => {
+    
+    let oauth = {Authorization: `bearer ${s.data().token}`};
 
-    //Sends user's data to mapData for injection into the profile.html DOM
-    console.log(res.data);mapData(res.data);
-    return res.data
+    //Sends request to load user's data from Github GraphQL API
+    axios.post(requestURL, {query: query}, {headers: oauth})
+    .then((res) => {
+
+      //Hides preloader when data arrives
+      document.getElementById('wrapper').setAttribute('class', '');
+      document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
+      document.getElementById('preloader').setAttribute('class', '');
+      document.getElementById('form-wrapper').setAttribute('class', 'main');
+      document.getElementById('main').setAttribute('class', 'main-visible');
+
+      //Sends user's data to mapData for injection into the profile.html DOM
+      mapData(res.data);
+      return res.data
+    })
+    .catch((err) => console.log(err))
   })
-  .catch((err) => console.log(err))
+  .catch((e) => console.log(e))
 }
- 
