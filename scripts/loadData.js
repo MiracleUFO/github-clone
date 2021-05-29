@@ -5,9 +5,11 @@ import { mapData } from "./mapData.js";
 export const loadData = async (username) => {   //Gets data using GitHub GraphQL API
 
   //Makes preloader visible 
+  document.getElementById('error-result').innerHTML = ``;
   document.getElementsByTagName('body')[0].setAttribute('id', 'wrapper');
   document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper-visible');
   document.getElementById('preloader').setAttribute('class', 'preloader');
+
 
   //Query arguments
   let requestURL = `https://api.github.com/graphql`;
@@ -51,6 +53,14 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
     axios.post(requestURL, {query: query}, {headers: oauth})
     .then((res) => {
 
+      if (!res.data.data.repositoryOwner) {
+        document.getElementById('wrapper').setAttribute('class', '');
+        document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
+        document.getElementById('preloader').setAttribute('class', '');
+        document.getElementById('error-result').innerHTML = `*User not found`;
+        return;
+      } 
+
       //Hides preloader when data arrives
       document.getElementById('wrapper').setAttribute('class', '');
       document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
@@ -60,7 +70,6 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
 
       //Sends user's data to mapData for injection into the profile.html DOM
       mapData(res.data);
-      return res.data
     })
     .catch((err) => console.log(err))
   })

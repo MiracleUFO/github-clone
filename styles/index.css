@@ -125,6 +125,12 @@ button {
   flex-direction: column;
 }
 
+#error-result {
+  font-size: 2em;
+  text-align: center;
+  color: red;
+}
+
 @-ms-viewport{
   width: device-width;
 }
@@ -180,6 +186,10 @@ button {
 
     #aside-repo-section {
       flex-direction: row;
+    }
+
+    #error-result {
+      font-size: 1em;
     }
   }
 
