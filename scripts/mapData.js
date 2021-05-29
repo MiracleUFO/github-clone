@@ -14,11 +14,11 @@ export const mapData = (data) => {  //
     <div>
       <img src=${userInfo.avatarUrl} alt="User avatar" class="avatar" />
       <div>
-        <h1>${userInfo.name}</h1>
+        <h1>${userInfo.name ? userInfo.name : ``}</h1>
         <p>${userInfo.login}</p>
       </div>
     </div>
-    <p>${userInfo.bio}</p>
+    <p>${userInfo.bio ? userInfo.bio : ``}</p>
   `;
 
 

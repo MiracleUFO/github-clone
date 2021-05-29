@@ -64,7 +64,7 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
         return;
       } 
 
-      //Displays user profile ui section
+      //Displays User profile section
       document.getElementById('form-wrapper').setAttribute('class', 'main');
       document.getElementById('main').setAttribute('class', 'main-visible');
 
