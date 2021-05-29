@@ -53,22 +53,22 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
     axios.post(requestURL, {query: query}, {headers: oauth})
     .then((res) => {
 
-      if (!res.data.data.repositoryOwner) {
-        document.getElementById('wrapper').setAttribute('class', '');
-        document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
-        document.getElementById('preloader').setAttribute('class', '');
-        document.getElementById('error-result').innerHTML = `*User not found`;
-        return;
-      } 
-
       //Hides preloader when data arrives
       document.getElementById('wrapper').setAttribute('class', '');
       document.getElementById('preloader-wrapper').setAttribute('class', 'preloader-wrapper');
       document.getElementById('preloader').setAttribute('class', '');
+
+      //if User is not found display error message
+      if (!res.data.data.repositoryOwner) {
+        document.getElementById('error-result').innerHTML = `*User not found`;
+        return;
+      } 
+
+      //Displays user profile ui section
       document.getElementById('form-wrapper').setAttribute('class', 'main');
       document.getElementById('main').setAttribute('class', 'main-visible');
 
-      //Sends user's data to mapData for injection into the profile.html DOM
+      //Sends user's data to mapData for injection into DOM
       mapData(res.data);
     })
     .catch((err) => console.log(err))
