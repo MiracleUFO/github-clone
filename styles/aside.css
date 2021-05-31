@@ -1,6 +1,6 @@
 aside {
   width: 90vw;
-  height: 30vh;
+  height: 35vh;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
@@ -46,12 +46,64 @@ aside > div:first-of-type div > p {
   font-weight: 200;
 }
 
+.status-section-pc {
+  position: absolute !important;
+  bottom: 85px !important;
+  right: -0.3vw;
+  display: none;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  width: 2.7vw;
+  height: 2.7vw;
+  font-size: 0.7em;
+}
+
+.status-section-pc:hover {
+  width: max-content;
+  right: -9vw;
+  padding: 0 20px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-section-pc  img {
+  width: 1.45vw;
+  position: static;
+  margin: 0 auto;
+  display: block;
+  bottom: 0;
+}
+
+.status-section-pc  > span {
+  display: none;
+}
+
+.status-section-mobile {
+  width: 80vw;
+  height: 8vw;
+  margin-top: 30px;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid #ddd;
+  align-items: center;
+  font-size: 1.8em;;
+}
+
+.status-section-mobile > img {
+  width: 5vw;
+  margin-right: 20px;
+}
+
+
 @media screen 
   and (min-device-width: 1200px)
   and (max-device-width: 1600px) {
     aside {
       display: block;
-      width: max-content;
+      width: 23vw;
       margin: 0;
       height: 90vh;
       padding: 0 2vw;
@@ -92,9 +144,26 @@ aside > div:first-of-type div > p {
     }
 
     aside img {
-      width: 22vw;
+      width: 21.5vw;
       position: relative;
-      bottom: 45px;
+      bottom: 30px;
       margin-left: -1vw;
+    }
+
+    .status-section-pc {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .status-section-pc:hover  > span {
+      display: inline-block;
+      margin-left: 5px;
+      color:  #0366d6;
+      cursor: pointer;
+    }
+
+    .status-section-mobile {
+      display: none;
     }
   }

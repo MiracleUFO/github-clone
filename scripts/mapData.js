@@ -5,20 +5,40 @@ import { languageColorModule } from './languageColorModule.js';
 export const mapData = (data) => {  //
 
   let userInfo = {...data.data.repositoryOwner};
-
+  
 
   //Map aside data
   const aside = document.getElementById('aside-section');
+  let statusSrc = userInfo.status ? userInfo.status.emojiHTML.split("fallback-src")[1].split("\"")[1] : ``;
+
   aside.innerHTML = `
     ${aside.innerHTML}
     <div>
-      <img src=${userInfo.avatarUrl} alt="User avatar" class="avatar" />
+      <div>
+        <img src=${userInfo.avatarUrl} alt="User avatar" class="avatar" />
+
+        ${userInfo.status ? `
+        <div class="status-section-pc">
+          <img src=${statusSrc} />
+          <span>${userInfo.status.message}</span>
+        </div>
+        ` : ``}
+      </div>
+
       <div>
         <h1>${userInfo.name ? userInfo.name : ``}</h1>
         <p>${userInfo.login}</p>
       </div>
     </div><br />
+
     <p>${userInfo.bio ? userInfo.bio : ``}</p>
+
+    ${userInfo.status ? `
+    <div class="status-section-mobile">
+      <img src=${statusSrc} /> 
+      ${userInfo.status.message}
+    </div>
+    ` : ``}
   `;
 
 
