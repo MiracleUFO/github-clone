@@ -9,6 +9,10 @@
   border-radius: 12px;
 }
 
+#repo-section form input::placeholder, #repo-section form input::-webkit-input-placeholder {
+  font-size: 1.5em;
+}
+
 .repo-item {
   margin: 10px 4vw;
   padding: 45px 0 40px;
@@ -28,7 +32,11 @@
   text-decoration: none;
   color: #0366d6;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 2.7em;
+}
+
+.repo-item a:hover {
+  text-decoration: underline;
 }
 
 .repo-item > div {
@@ -37,19 +45,20 @@
 
 .repo-item p, .description {
   color: #888;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .repo-item span {
-  font-size: 11.3px;
+  font-size: 11.5px;
   color: #222;
+  margin-right: 15px;
 }
 
 .description {
   margin-top: 10px;
   width: 70%;
   word-wrap: break-word;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 .adt-info {
@@ -61,8 +70,8 @@
 }
 
 .language-div {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   display: inline-block;
   border-radius: 50%;
 }
@@ -102,6 +111,10 @@
     #repo-section form input {
       border: 1px solid #eee;
     }
+
+    #repo-section form input::placeholder, #repo-section form input::-webkit-input-placeholder {
+      font-size: 1em;
+    }
     
     #public-repo-div {
       font-size: 14px;
@@ -127,7 +140,7 @@
       align-items: center;
       width: 70.5px;
       height: 27px;
-      border: 1px inset lightgrey;
+      border: 1px outset #eee;
       margin: 0;
       color: grey;
       background: rgba(0, 0, 0, 0.03);
@@ -154,6 +167,10 @@
 
     .adt-info > span:first-of-type span {
       margin-right: 1vw;
+    }
+
+    .repo-item span {
+      font-size: 11px;
     }
 
     .adt-info .iconify {
