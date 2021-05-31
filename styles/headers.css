@@ -185,20 +185,20 @@
   font-weight: 400;
 }
 
-#secondary-header > div::-webkit-scrollbar, #secondary-header > div::-ms-scrollbar {
+#secondary-header > div::-webkit-scrollbar {
   width: 5px;
   height: 9px;   
 }
 
-#secondary-header > div::-webkit-scrollbar-thumb, #secondary-header > div::-ms-scrollbar-thumb {
+#secondary-header > div::-webkit-scrollbar-thumb {
   background-color: lightgrey;        
 }
 
-#secondary-header > div::-webkit-scrollbar-track-piece:end, #secondary-header > div::-ms-scrollbar-track-piece:end {
+#secondary-header > div::-webkit-scrollbar-track-piece:end {
   margin-right: 50px; 
 }
 
-#secondary-header > div::-webkit-scrollbar-track-piece:start, #secondary-header > div::-ms-scrollbar-track-piece:start {
+#secondary-header > div::-webkit-scrollbar-track-piece:start {
   margin-left: 50px;
 }
 
@@ -265,9 +265,14 @@
       font-size: 0.9em;
       margin-right: 2vw;
       justify-content: center;
+      cursor: pointer;
     }
 
-    #repo-tab {
+    #secondary-header > div div:hover {
+      border-bottom: 2px inset lightgrey;
+    }
+
+    #repo-tab, #secondary-header > div #repo-tab:hover {
       border-bottom: 2px inset #f9826c;
     }
 
