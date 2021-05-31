@@ -17,7 +17,7 @@ export const mapData = (data) => {  //
         <h1>${userInfo.name ? userInfo.name : ``}</h1>
         <p>${userInfo.login}</p>
       </div>
-    </div>
+    </div><br />
     <p>${userInfo.bio ? userInfo.bio : ``}</p>
   `;
 
@@ -78,6 +78,7 @@ export const mapData = (data) => {  //
   })
   document.getElementById('public-repo-count').innerHTML = `<b>${publicRepoCount}</b>`;
 
+  
   //Maps header data
   const userAvatar = document.getElementById('avatar-div-petit');
   const repoCount = document.getElementById('repo-count');

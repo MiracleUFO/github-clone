@@ -122,13 +122,15 @@
 
     .repo-item button {
       position: absolute;
-      display: inline;
-      width: 75px;
-      height: 32px;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 70.5px;
+      height: 27px;
+      border: 1px inset lightgrey;
       margin: 0;
       color: grey;
       background: rgba(0, 0, 0, 0.03);
-      border: none;
     }
 
     .repo-item a {

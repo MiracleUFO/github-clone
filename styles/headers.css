@@ -25,7 +25,7 @@
 
 #primary-header-mobile .iconify, #primary-header-pc .iconify {
   color: #eee;
-  width: 3.2em;
+  width: 2.5em;
   height: 9em;
 }
 
@@ -46,14 +46,14 @@
 }
 
 .bell-blob {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   background-color: deepskyblue;
   border-radius: 50%;
   position: absolute;
-  top: 38px;
+  top: 45.5px;
   z-index: 20;
-  left: 94.5%;
+  left: 95%;
 }
 
 #primary-header-pc {
@@ -173,16 +173,37 @@
 }
 
 #secondary-header > div {
-  color: grey;
+  color: black;
   display: flex;
   justify-content: space-between;
-  height: 70px;
-  align-items: center;
+  height: 90px;
+  align-items: flex-end;
+  text-align: end;
   padding: 0 5vw 0;
   overflow-x: scroll;
+  scroll-behavior: smooth;
+  font-weight: 400;
 }
 
-#secondary-header > div .iconify {
+#secondary-header > div::-webkit-scrollbar, #secondary-header > div::-ms-scrollbar {
+  width: 5px;
+  height: 9px;   
+}
+
+#secondary-header > div::-webkit-scrollbar-thumb, #secondary-header > div::-ms-scrollbar-thumb {
+  background-color: lightgrey;        
+}
+
+#secondary-header > div::-webkit-scrollbar-track-piece:end, #secondary-header > div::-ms-scrollbar-track-piece:end {
+  margin-right: 50px; 
+}
+
+#secondary-header > div::-webkit-scrollbar-track-piece:start, #secondary-header > div::-ms-scrollbar-track-piece:start {
+  margin-left: 50px;
+}
+
+#secondary-header .iconify {
+  color: grey;
   display: none;
   margin-right: 7px;
   position: relative;
@@ -192,15 +213,21 @@
 #secondary-header > div div {
   display: flex;
   align-items: center;
-  height: 70px;
-  font-size: 2.3em;
-  margin-right: 8.5vw;
+  justify-content: center;
+  height: 100px;
+  font-size: 2.7em;
+  margin-right: 9vw;
 }
 
 #repo-tab {
-  border-bottom: 1px inset red;
+  border-bottom: 4px solid #f9826c;
+  font-weight: 600;
+}
+
+#repo-tab > .iconify {
   color: black;
 }
+
 
 #repo-count {
   width: 50px;
@@ -221,28 +248,34 @@
     }
 
     #secondary-header > div {
-      font-weight: 600;
-      width: 50%;
-      margin: 0 25% 0;
-      justify-content: flex-start;
+      width: 40%;
+      margin: 0 20% 0 28%;
       padding: 0;
       overflow-x: visible;
     }
 
     #secondary-header > div .iconify {
       display: inline;
+      width: 1.09em;
+      height: 3.2em;
     }
 
     #secondary-header > div div {
-      font-size: 1em;
-      margin-right: 3.5vw;
+      height: 50px;
+      font-size: 0.9em;
+      margin-right: 2vw;
+      justify-content: center;
+    }
+
+    #repo-tab {
+      border-bottom: 2px inset #f9826c;
     }
 
     #repo-count {
-      width: 35px;
+      width: 30px;
       height: 20px;
       margin-left: 5px;
-      font-size: 0.8em;
+      font-size: 0.75em;
     }
 }
 
