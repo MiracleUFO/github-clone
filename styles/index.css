@@ -89,11 +89,11 @@ button:hover {
 }
 
 .focus-visible {
-  box-shadow: 0 0 3.2px 0.9px #0366d6;
-  -webkit-box-shadow: 0 0 3.2px 0.9px #0366d6;
-  -moz-box-shadow: 0 0 3.2px 0.9px #0366d6;
-  border: 1px solid #005cc5;
-  outline: none;
+  box-shadow: 0 0 3.2px 0.9px #0366d6 !important;
+  -webkit-box-shadow: 0 0 3.2px 0.9px #0366d6 !important;
+  -moz-box-shadow: 0 0 3.2px 0.9px #0366d6 !important;
+  border: 1px solid #005cc5 !important;
+  outline: none !important;
 }
 
 label {
