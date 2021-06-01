@@ -72,7 +72,6 @@ export const loadData = async (username) => {   //Gets data using GitHub GraphQL
       document.getElementById('form-wrapper').setAttribute('class', 'main');
       document.getElementById('main').setAttribute('class', 'main-visible');
 
-      console.log(res.data);
       //Sends user's data to mapData for injection into DOM
       mapData(res.data);
     })

@@ -1,6 +1,6 @@
 aside {
   width: 90vw;
-  height: 35vh;
+  height: 43vh;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
@@ -83,7 +83,7 @@ aside > div:first-of-type div > p {
 .status-section-mobile {
   width: 80vw;
   height: 8vw;
-  margin-top: 30px;
+  margin-top: 7vh;
   padding: 0 2vw;
   display: flex;
   justify-content: flex-start;
